@@ -1,0 +1,189 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+body {
+  font-size: 1.6rem;
+  font-family: "Raleway", sans-serif;
+  background: #0e0e0e;
+}
+img {
+  max-width: 100%;
+  display: block;
+  margin: 0;
+}
+/*cualquier clase que finalizan en __contenedor*/
+[class*="contenedor"] {
+  width: 95%;
+  max-width: 120rem;
+  margin: 0 auto;
+}
+/*! Header*/
+.header {
+  background: #000;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  padding: 1rem;
+}
+
+.navegacion {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 768px) {
+  .navegacion {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+.navegacion__logo {
+  width: 5rem;
+  margin: 0 auto;
+}
+@media (min-width: 768px) {
+  .navegacion__logo {
+    margin: 0;
+  }
+}
+.menu {
+  padding-block: 1rem;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+.menu__link {
+  text-decoration: none;
+  color: #fff;
+  transition: all 0.3s;
+}
+.menu__link:hover {
+  color: #be030f;
+}
+
+/*! Hero section*/
+
+.hero {
+  background-image: linear-gradient(to right, #2a3de06b, #1814f185),
+    url("img/los-vengadores-artwork_3000x1688_xtrafondos.com.jpg");
+  height: 80vh;
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+@media (min-width: 768px) {
+  .hero {
+    background-size: cover;
+    height: 80vh;
+  }
+}
+
+/*!Main*/
+.integrantes__titulo {
+  font-size: 3.4rem;
+  text-align: center;
+  color: #fff;
+  margin-block: 4rem;
+}
+.cards__grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  background-color: #141414;
+  border-radius: 1rem;
+  flex: 1 1 30rem;
+}
+.imagen {
+  margin: 0 auto;
+  height: 30rem;
+}
+.contenido {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem 1rem;
+  color: #fff;
+}
+.contenido__titulo {
+  font-size: 2.4rem;
+  text-align: center;
+  margin-block: 1rem;
+}
+
+.contenido__biografia-label,
+.contenido__creadores-label {
+  display: block;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+.contenido__tags {
+  font-weight: 700;
+}
+
+/*! Galeria*/
+
+.galeria__titulo {
+  font-size: 3.4rem;
+  text-align: center;
+  color: #fff;
+  margin-block: 4rem;
+}
+
+.galeria {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+  height: 80vh;
+}
+@media (min-width: 768px) {
+  .galeria {
+    flex-direction: row;
+    height: 60vmin;
+  }
+}
+.galeria__imagen {
+  height: 100%;
+  flex: 1;
+  object-fit: cover;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 1rem;
+  transition: all 0.3s;
+}
+.galeria__imagen:hover {
+  flex: 12;
+}
+
+/*! Footer*/
+.footer {
+  background-color: #000;
+  margin-top: 4rem;
+  padding: 2rem 1rem;
+}
+.footer__texto {
+  color: #fff;
+  font-weight: 700;
+  text-align: center;
+}
